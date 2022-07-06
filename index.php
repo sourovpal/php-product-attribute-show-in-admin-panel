@@ -1,9 +1,5 @@
 <?php
 
-$a = ['a', 'b', 'c'];
-$b = ['1', '2', '3'];
-$c = ['+', '*'];
-
 function get_combinations($arrays) {
     $result = array(array());
     foreach ($arrays as $property => $property_values) {
@@ -23,14 +19,14 @@ $new = get_combinations (Array
 (
     Array
     (
-        '1' => 'White',
-        '2' => 'Green',
-        '3' => 'Blue',
-        '7' => 'Yellow',
-        '8' => 'Orange',
-        '9' => 'Black',
-        '10' => 'Red',
-        '11' => 'Blue',
+        'White',
+        'Green',
+        'Blue',
+        'Yellow',
+        'Orange',
+        'Black',
+        'Red',
+        'Blue',
     ),
     Array
     (
