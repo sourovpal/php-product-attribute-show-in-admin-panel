@@ -72,7 +72,6 @@ echo '</ul>';
 
 ?>
 
-
 <?php
 
 $attr_list = [
@@ -124,7 +123,11 @@ if(isset($_POST['submit'])){
             'error' => $_FILES['image']['error'][$i],
             'size' => $_FILES['image']['size'][$i],
         ];
-        print_r($attr);
+        $index = 0;
+        foreach($attr['image']['name'] as $name){
+            move_uploaded_file($attr['image']['tmp_name'][$index], __DIR__.'/upload/'.$name);
+            $index++;
+        }
         $i++;
     }
 }
@@ -154,22 +157,6 @@ echo '</ul>';
 
 
 ?>
-
-<button name="submit" id="submit">Submit</button>
-
-</form>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    // (function(){
-    //     $('#submit').click(function(){
-    //         $('.attr').map(function(test, val){
-    //             console.log($());
-    //         });
-    //     });
-    // })();
-</script>
 
 <button name="submit" id="submit">Submit</button>
 
