@@ -53,3 +53,48 @@ foreach($new as $attrs){
     echo '</li>';
 }
 echo '</ul>';
+
+
+
+
+
+
+
+
+
+
+
+$arrays = [
+    ['Red', 'Green', 'Yellow'], 
+    ['S', 'M', 'L']
+];
+$result = [[]];
+foreach($arrays as $array_key => $array_values){
+    $temp = [];
+    foreach($result as $result_key => $result_value){
+        foreach($array_values as $key => $value){
+            $temp[] = $result_value + array($array_key => $value);
+        }
+        $index = 0;
+    }
+    $result =  $temp;
+}
+echo '<pre>';
+print_r($result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
