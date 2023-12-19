@@ -85,6 +85,25 @@ print_r($result);
 
 
 
+$array_groups = [];
+  
+    foreach($result as $key => $items){
+        if($key == 0){
+        foreach($items as $k => $item){
+            $array_groups[$k] = [$item];
+        }
+        }else{
+            foreach($items as $k => $item){
+                $current = $array_groups[$k];
+                if(!in_array($item, $current)){
+                    $current[] = $item;
+                }
+                $array_groups[$k] = $current;
+            }
+        }
+    }
+echo '<pre>';
+print_r($array_groups);
 
 
 
