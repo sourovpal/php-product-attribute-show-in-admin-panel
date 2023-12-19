@@ -108,6 +108,26 @@ print_r($array_groups);
 
 
 
+  
+  $array_groups = [];
+  
+    foreach($result as $key => $items){
+        foreach($items as $k => $item){
+            if($key == 0){
+                $array_groups = array_chunk($items, 1);
+            }else{
+                $current = $array_groups[$k];
+                if(!in_array($item, $current)){
+                    $current[] = $item;
+                }
+                $array_groups[$k] = $current;
+            }
+        }
+    }
+echo '<pre>';
+print_r($array_groups);
+
+
 
 
 
