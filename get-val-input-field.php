@@ -1,5 +1,5 @@
 <?php
-
+//https://github.com/bpolaszek/cartesian-product
 $attr_list = [
     [
         'Red',
